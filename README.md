@@ -5,8 +5,9 @@
   - gcc
   - gfortran: fortran compiler
   - gdb: for debug use
-  - bash
+  - bash: shell
   - musl: libc
+  - make: for Makefile build
 
 ## Build
 
