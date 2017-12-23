@@ -39,3 +39,12 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 ENV LANG=C.UTF-8
 
 RUN apk add --no-cache gcc gfortran gdb bash musl musl-dev make
+
+ENV BUILD_DEPS="gettext"  \
+    RUNTIME_DEPS="libintl"
+
+RUN set -x && \
+    apk add --update $RUNTIME_DEPS && \
+    apk add --virtual build_deps $BUILD_DEPS &&  \
+    cp /usr/bin/envsubst /usr/local/bin/envsubst && \
+apk del build_deps
