@@ -38,4 +38,4 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 
 ENV LANG=C.UTF-8
 
-RUN apk add --no-cache gcc gfortran gdb bash musl make
+RUN apk add --no-cache gcc gfortran gdb bash musl musl-dev make
