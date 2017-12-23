@@ -8,6 +8,8 @@
   - bash: shell
   - musl: libc
   - make: for Makefile build
+  - gettext: `envsubst`
+  - glibc
 
 ## Build
 
